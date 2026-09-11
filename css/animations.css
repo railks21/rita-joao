@@ -1,0 +1,72 @@
+/* ==========================================================================
+   ANIMAÇÕES E TRANSIÇÕES SUAVES (animations.css)
+   ========================================================================== */
+
+/* Fade In Up para elementos visíveis ao rolar a página */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delays escalonados para listas e grids */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Animação suave para o Hero Badge */
+@keyframes softPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.hero-badge {
+  animation: softPulse 4s ease-in-out infinite;
+}
+
+/* Suave balanço para o ícone de coração */
+@keyframes heartFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-3px) scale(1.08); }
+}
+
+.ornament svg {
+  animation: heartFloat 3s ease-in-out infinite;
+}
+
+/* Modal fade-in */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lightbox-modal.active .lightbox-img-wrap {
+  animation: modalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Confetti ou comemoração RSVP */
+@keyframes popCheck {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.icon-celebrate {
+  animation: popCheck 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+

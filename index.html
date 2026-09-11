@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rita Alves &amp; João Abreu — O Nosso Casamento • 23 de Julho de 2027</title>
+  <meta name="description" content="Website oficial do casamento de Rita Alves &amp; João Abreu na Casa do Gandião. Confirme a sua presença, consulte o programa do dia, dress code e informações úteis.">
+  
+  <!-- Open Graph para partilha no WhatsApp e Redes Sociais -->
+  <meta property="og:title" content="Casamento de Rita Alves &amp; João Abreu">
+  <meta property="og:description" content="Vamos casar a 23 de Julho de 2027 na Casa do Gandião (Fafe)! Acompanhe todas as novidades e confirme a sua presença.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Google Fonts: Playfair Display, Montserrat e Alex Brush -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Folhas de Estilo -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       HEADER / MENU DE NAVEGAÇÃO
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="nav-brand">
+        <span class="brand-monogram">R &amp; J</span>
+        <span class="brand-date">23.07.2027</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Abrir Menu" id="mobileMenuBtn">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <nav class="nav-menu">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#historia" class="nav-link">História</a>
+        <a href="#programa" class="nav-link">Programa</a>
+        <a href="#locais" class="nav-link">Localização</a>
+        <a href="#dresscode" class="nav-link">Dress Code</a>
+        <a href="#galeria" class="nav-link">Momentos</a>
+        <a href="#presentes" class="nav-link">Presentes</a>
+        <a href="#faq" class="nav-link">Dúvidas</a>
+        <a href="#rsvp" class="nav-cta">Confirmar Presença</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       HERO SECTION (CABEÇALHO COM CONTADOR)
+       ====================================================================== -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-content">
+      <span class="hero-badge">Vamos dar o nó!</span>
+      
+      <h1 class="hero-names">
+        Rita Alves <span class="ampersand">&amp;</span> João Abreu
+      </h1>
+
+      <div class="hero-date-box">
+        <span>Sexta-feira</span>
+        <span class="separator"></span>
+        <span data-bind="event.displayDate">23 de Julho de 2027</span>
+        <span class="separator"></span>
+        <span>Casa do Gandião • Fafe</span>
+      </div>
+
+      <p class="hero-quote">
+        "O amor não consiste em olhar um para o outro, mas sim em olhar juntos na mesma direção."
+      </p>
+
+      <!-- Contador Regressivo -->
+      <div class="countdown-wrapper">
+        <p class="countdown-title">Faltam apenas</p>
+        <div class="countdown-grid">
+          <div class="countdown-card">
+            <span class="countdown-num" id="days">--</span>
+            <span class="countdown-label">Dias</span>
+          </div>
+          <div class="countdown-card">
+            <span class="countdown-num" id="hours">--</span>
+            <span class="countdown-label">Horas</span>
+          </div>
+          <div class="countdown-card">
+            <span class="countdown-num" id="minutes">--</span>
+            <span class="countdown-label">Minutos</span>
+          </div>
+          <div class="countdown-card">
+            <span class="countdown-num" id="seconds">--</span>
+            <span class="countdown-label">Segundos</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ações Rápidas -->
+      <div class="hero-buttons">
+        <a href="#rsvp" class="btn btn-primary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          Confirmar Presença
+        </a>
+        <a href="#programa" class="btn btn-secondary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Ver Programa
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECÇÃO: BOAS-VINDAS
+       ====================================================================== -->
+  <section class="section">
+    <div class="container text-center">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Querida Família e Amigos</span>
+        <h2 class="section-title">A Nossa Celebração</h2>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <p class="section-desc">
+          Criámos este cantinho especial para partilhar convosco todos os detalhes e emoções da preparação do nosso grande dia. Estamos de coração cheio e muito felizes por podermos viver este momento único ao vosso lado!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECÇÃO: NOSSA HISTÓRIA (TIMELINE)
+       ====================================================================== -->
+  <section id="historia" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">O Nosso Caminho</span>
+        <h2 class="section-title">Como Tudo Começou</h2>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <p class="section-desc">Alguns dos momentos mais marcantes da nossa viagem a dois até ao altar.</p>
+      </div>
+
+      <div class="story-timeline">
+        <!-- Marco 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2019</span>
+            <h3 class="timeline-title">O Primeiro Olhar</h3>
+            <p class="timeline-desc">
+              Um encontro por acaso entre conversas de amigos em comum que se transformou num serão inesquecível e no início de uma cumplicidade sem fim.
+            </p>
+          </div>
+        </div>
+
+        <!-- Marco 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2021</span>
+            <h3 class="timeline-title">A Primeira Grande Viagem</h3>
+            <p class="timeline-desc">
+              Descobrimos a paixão partilhada por explorar novos horizontes, provar novos sabores e colecionar pores do sol em cada recanto visitado.
+            </p>
+          </div>
+        </div>
+
+        <!-- Marco 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <h3 class="timeline-title">O Nosso Lar</h3>
+            <p class="timeline-desc">
+              Juntámos as escovas de dentes, montámos os nossos móveis e construímos o refúgio onde nos sentimos verdadeiramente em casa todos os dias.
+            </p>
+          </div>
+        </div>
+
+        <!-- Marco 4 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2026</span>
+            <h3 class="timeline-title">O "Sim" Mais Fácil!</h3>
+            <p class="timeline-desc">
+              Com o coração aos pulos e num ambiente de pura magia, o João fez a pergunta e a Rita disse o "Sim" que nos traz a este momento tão especial.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECÇÃO: PROGRAMA DO DIA
+       ====================================================================== -->
+  <section id="programa" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">O Itinerário</span>
+        <h2 class="section-title">Programa do Grande Dia</h2>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <p class="section-desc">Horários previstos para acompanhar todos os momentos do casamento sem perder nada.</p>
+      </div>
+
+      <div class="schedule-grid">
+        <!-- 14:30 -->
+        <div class="schedule-card reveal reveal-delay-1">
+          <div class="schedule-card-top">
+            <span class="schedule-time">14:30</span>
+            <div class="schedule-icon-wrap">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="schedule-title">Receção dos Convidados</h3>
+          <p class="schedule-desc">Chegada dos familiares e amigos com música ambiente suave para preparar as emoções.</p>
+        </div>
+
+        <!-- 15:00 -->
+        <div class="schedule-card reveal reveal-delay-2">
+          <div class="schedule-card-top">
+            <span class="schedule-time">15:00</span>
+            <div class="schedule-icon-wrap">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="schedule-title">A Cerimónia</h3>
+          <p class="schedule-desc">O momento solene e comovente da troca de alianças e votos de amor eterno.</p>
+        </div>
+
+        <!-- 16:30 -->
+        <div class="schedule-card reveal reveal-delay-3">
+          <div class="schedule-card-top">
+            <span class="schedule-time">16:30</span>
+            <div class="schedule-icon-wrap">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7m14 0l-7-7-7 7m7 7v7"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="schedule-title">Cocktail &amp; Brinde</h3>
+          <p class="schedule-desc">Aperitivos deliciosos, bebidas refrescantes e as primeiras fotos com todos os convidados.</p>
+        </div>
+
+        <!-- 19:30 -->
+        <div class="schedule-card reveal reveal-delay-1">
+          <div class="schedule-card-top">
+            <span class="schedule-time">19:30</span>
+            <div class="schedule-icon-wrap">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="schedule-title">Jantar &amp; Discursos</h3>
+          <p class="schedule-desc">Menu especial servido com carinho, brindes cheios de risos e partilha à mesa.</p>
+        </div>
+
+        <!-- 22:30 -->
+        <div class="schedule-card reveal reveal-delay-2">
+          <div class="schedule-card-top">
+            <span class="schedule-time">22:30</span>
+            <div class="schedule-icon-wrap">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M3 21h18"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="schedule-title">Corte do Bolo</h3>
+          <p class="schedule-desc">O brinde especial dos recém-casados iluminado por sparkles e muita emoção.</p>
+        </div>
+
+        <!-- 23:00 -->
+        <div class="schedule-card reveal reveal-delay-3">
+          <div class="schedule-card-top">
+            <span class="schedule-time">23:00</span>
+            <div class="schedule-icon-wrap">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="schedule-title">Festa &amp; Pista Aberta</h3>
+          <p class="schedule-desc">DJ, bar aberto, ceia da madrugada e passos de dança até ao final da noite!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECÇÃO: LOCAIS
+       ====================================================================== -->
+  <section id="locais" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Onde Nos Encontrar</span>
+        <h2 class="section-title">Localização do Evento</h2>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <p class="section-desc">Temos a enorme alegria de vos receber na magnífica Casa do Gandião!</p>
+      </div>
+
+      <div class="locations-container reveal">
+        <div class="venue-card">
+          <span class="venue-tagline">Quinta de Sonho • Fafe</span>
+          <h3 class="venue-title">Casa do Gandião</h3>
+
+          <div class="venue-address-box">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>Rua do Penedo nº 7, 4820-746 Arões (São Romão), Fafe</span>
+          </div>
+
+          <p class="venue-description">
+            A Casa do Gandião é um espaço mágico e requintado, cercado pela tranquilidade e beleza do Minho. Com jardins deslumbrantes para o cocktail, salão climatizado e um serviço de excelência, será o cenário perfeito para celebrarmos o nosso amor convosco!
+          </p>
+
+          <div class="venue-actions">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Casa+do+Gandi%C3%A3o+Fafe" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              Abrir no Google Maps
+            </a>
+            <a href="https://waze.com/ul?q=Casa%20do%20Gandi%C3%A3o%20Fafe" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+              Abrir no Waze
+            </a>
+            <a href="https://www.casadogandiao.pt/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+              Site Oficial da Quinta
+            </a>
+          </div>
+
+          <div class="venue-features-badge">
+            <div class="feature-badge-item">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Estacionamento privativo</span>
+            </div>
+            <div class="feature-badge-item">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Jardins &amp; Salão de festas</span>
+            </div>
+            <div class="feature-badge-item">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Alojamento local disponível</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mapa Interativo Google Maps -->
+        <div class="venue-map-container">
+          <iframe 
+            src="https://maps.google.com/maps?width=100%25&amp;height=420&amp;hl=pt&amp;q=R.%20do%20Penedo%20n%C2%BA%207%2C%204820-746%20Ar%C3%B5es%20(S%C3%A3o%20Rom%C3%A3o)+(Casa%20do%20Gandi%C3%A3o)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            title="Localização da Casa do Gandião">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECÇÃO: DRESS CODE & DICAS
+       ====================================================================== -->
+  <section id="dresscode" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Dicas Úteis</span>
+        <h2 class="section-title">Dress Code &amp; Recomendações</h2>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <p class="section-desc">Pequenos pormenores para garantir que desfrutam do dia com o máximo de conforto e estilo.</p>
+      </div>
+
+      <div class="tips-grid">
+        <!-- Tip 1 -->
+        <div class="tip-card reveal reveal-delay-1">
+          <div class="tip-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="tip-title">Traje: Formal / Passeio Completo</h3>
+          <p class="tip-text">
+            Convidamo-vos a vestir a vossa melhor roupa de festa! Apenas pedimos gentilmente que evitem tons de branco e marfim, reservados para a noiva.
+          </p>
+        </div>
+
+        <!-- Tip 2 -->
+        <div class="tip-card reveal reveal-delay-2">
+          <div class="tip-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="tip-title">Calçado &amp; Dança</h3>
+          <p class="tip-text">
+            O cocktail e alguns momentos do dia poderão decorrer em zonas ajardinadas. Protetores de saltos ou um calçado suplente confortável são muito bem-vindos para a pista de dança!
+          </p>
+        </div>
+
+        <!-- Tip 3 -->
+        <div class="tip-card reveal reveal-delay-3">
+          <div class="tip-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <h3 class="tip-title">Clima de Julho</h3>
+          <p class="tip-text">
+            Em pleno verão os dias costumam ser quentes e ensolarados, mas a brisa noturna pode arrefecer um pouco. Recomendamos um agasalho leve ou xaile para o cair da noite.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECÇÃO: GALERIA DE FOTOS (MOMENTOS)
+       ====================================================================== -->
+  <section id="galeria" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Memórias a Dois</span>
+        <h2 class="section-title">Os Nossos Momentos</h2>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <p class="section-desc">Pedaços do nosso caminho e dos sorrisos que nos trouxeram até aqui. (Clique nas imagens para ampliar)</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal reveal-delay-1">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Sessão dos Noivos" loading="lazy">
+          <div class="gallery-overlay"><span>Ver Foto 🔍</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-2">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Cumplicidade e Amor" loading="lazy">
+          <div class="gallery-overlay"><span>Ver Foto 🔍</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-3">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="O Abraço Perfeito" loading="lazy">
+          <div class="gallery-overlay"><span>Ver Foto 🔍</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-4">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=800&q=80" alt="Momentos de Alegria" loading="lazy">
+          <div class="gallery-overlay"><span>Ver Foto 🔍</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECÇÃO: RSVP / CONFIRMAÇÃO DE PRESENÇA
+       ====================================================================== -->
+  <section id="rsvp" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Contamos Convosco!</span>
+        <h2 class="section-title">Confirmação de Presença</h2>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <p class="section-desc">Por favor confirme a sua presença até ao dia <strong>31 de Maio de 2027</strong> para que possamos organizar todos os lugares com carinho.</p>
+      </div>
+
+      <div class="rsvp-wrapper reveal">
+        <div class="rsvp-deadline-wrap">
+          <span class="rsvp-deadline-badge">
+            📅 Data Limite: <span data-bind="event.rsvpDeadline">31 de Maio de 2027</span>
+          </span>
+        </div>
+
+        <form id="rsvpForm" class="rsvp-form">
+          <!-- Nome Completo -->
+          <div class="form-group-full">
+            <label class="form-label" for="guestName">Nome Completo *</label>
+            <input type="text" id="guestName" class="form-input" placeholder="Ex: Maria Fernandes & Família" required>
+          </div>
+
+          <!-- Confirmação -->
+          <div class="form-group-full">
+            <label class="form-label">Irá comparecer? *</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="attendance" value="Sim" checked>
+                <span>Sim, estarei presente! 🎉</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="attendance" value="Não">
+                <span>Infelizmente não poderei comparecer 💔</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Adultos -->
+          <div>
+            <label class="form-label" for="adultsCount">Número de Adultos</label>
+            <select id="adultsCount" class="form-select">
+              <option value="1">1 Pessoa</option>
+              <option value="2" selected>2 Pessoas</option>
+              <option value="3">3 Pessoas</option>
+              <option value="4">4 Pessoas</option>
+              <option value="5+">5 ou mais</option>
+            </select>
+          </div>
+
+          <!-- Crianças -->
+          <div>
+            <label class="form-label" for="childrenCount">Crianças (até 10 anos)</label>
+            <select id="childrenCount" class="form-select">
+              <option value="0" selected>Nenhuma</option>
+              <option value="1">1 Criança</option>
+              <option value="2">2 Crianças</option>
+              <option value="3+">3 ou mais</option>
+            </select>
+          </div>
+
+          <!-- Restrições Alimentares -->
+          <div class="form-group-full">
+            <label class="form-label" for="dietRestrictions">Restrições Alimentares ou Alergias</label>
+            <input type="text" id="dietRestrictions" class="form-input" placeholder="Ex: Nenhuma / Vegetariano / Intolerância ao Glúten">
+          </div>
+
+          <!-- Sugestão Musical -->
+          <div class="form-group-full">
+            <label class="form-label" for="songRequest">Uma música que te faça ir para a pista de dança!</label>
+            <input type="text" id="songRequest" class="form-input" placeholder="Artista - Nome da música">
+          </div>
+
+          <!-- Mensagem aos Noivos -->
+          <div class="form-group-full">
+            <label class="form-label" for="guestNotes">Mensagem aos Noivos (Opcional)</label>
+            <textarea id="guestNotes" class="form-textarea" rows="3" placeholder="Deixe aqui uma mensagem de carinho..."></textarea>
+          </div>
+
+          <!-- Ações do Formulário -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 380px;">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.35.49 1.199.534 1.288.043.088.072.19.014.305-.058.115-.087.19-.173.289l-.26.302c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086.159.058 1.011.477 1.184.564.173.086.289.13.332.202.043.072.043.419-.101.824z"/>
+              </svg>
+              Enviar Confirmação por WhatsApp
+            </button>
+
+            <button type="button" id="btnCopyRsvp" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1.4rem;">
+              📋 Copiar Resumo da Confirmação
+            </button>
+
+            <p class="rsvp-help-text">
+              Ao clicar no botão verde, uma mensagem personalizada será preparada diretamente no seu WhatsApp para nos enviar.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECÇÃO: LISTA DE CASAMENTO & IBAN
+       ====================================================================== -->
+  <section id="presentes" class="section section-alt">
+    <div class="container">
+      <div class="gifts-container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Com Muito Amor</span>
+          <h2 class="section-title">Lista de Presentes</h2>
+          <div class="ornament">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <p class="section-desc">
+            A vossa presença no nosso casamento é o melhor presente que poderíamos receber. Mas caso queiram ajudar-nos a construir os alicerces desta nossa nova etapa e contribuir para a nossa sonhada lua de mel, deixamos aqui as opções mais práticas:
+          </p>
+        </div>
+
+        <div class="gifts-cards">
+          <!-- IBAN Card -->
+          <div class="gift-card reveal reveal-delay-1">
+            <div class="gift-card-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+              </svg>
+            </div>
+            <h3 class="gift-card-title">Transferência Bancária (IBAN)</h3>
+            <p class="gift-card-subtitle" id="ibanHolder">Rita Alves e João Abreu</p>
+            <div class="copy-box">
+              <span class="copy-value" id="ibanValue">PT50 0000 0000 0000 0000 0000 0</span>
+              <button class="btn-copy" data-target="ibanValue" data-label="IBAN">Copiar</button>
+            </div>
+          </div>
+
+          <!-- MB WAY Card -->
+          <div class="gift-card reveal reveal-delay-2">
+            <div class="gift-card-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="gift-card-title">MB WAY</h3>
+            <p class="gift-card-subtitle">Contacto direto para envio</p>
+            <div class="copy-box">
+              <span class="copy-value" id="mbwayValue">+351 912 345 678</span>
+              <button class="btn-copy" data-target="mbwayValue" data-label="Contacto MB WAY">Copiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECÇÃO: PERGUNTAS FREQUENTES (FAQ)
+       ====================================================================== -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Tire as Suas Dúvidas</span>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <p class="section-desc">Reunimos as respostas para as perguntas mais comuns dos nossos convidados.</p>
+      </div>
+
+      <div class="faq-accordion reveal">
+        <!-- Item 1 -->
+        <div class="faq-item active">
+          <button class="faq-question" type="button">
+            <span>Até quando posso confirmar a minha presença?</span>
+            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Agradecemos de coração que nos confirmem até ao dia <strong>31 de Maio de 2027</strong> através do formulário de RSVP nesta página, para que possamos assegurar a logística e os lugares de todos junto do serviço de catering.
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Posso levar crianças ao casamento?</span>
+            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Com certeza! As crianças da nossa família e amigos são muito bem-vindas. Por favor, lembre-se de assinalar no formulário de confirmação quantas crianças irão consigo para que possamos providenciar cadeiras e o menu infantil.
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Tenho alergias ou restrições na alimentação, e agora?</span>
+            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Não se preocupe! Ao preencher a confirmação de presença (RSVP), encontrará um campo específico para mencionar qualquer tipo de intolerância, alergia ou dieta alimentar (vegetariana, vegan, celíaca, etc.). A quinta adaptará os pratos com todo o rigor.
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Haverá parque de estacionamento na Casa do Gandião?</span>
+            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Sim! A Casa do Gandião dispõe de amplo estacionamento privativo e gratuito com capacidade para todos os carros dos convidados.
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Como chegar à Casa do Gandião?</span>
+            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            A Casa do Gandião fica situada na Rua do Penedo nº 7, 4820-746 Arões (São Romão), Fafe. Pode utilizar os botões na secção Localização acima para abrir o itinerário diretamente no Google Maps ou no Waze no seu telemóvel.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       RODAPÉ (FOOTER)
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-monogram">Rita Alves &amp; João Abreu</div>
+      <p class="footer-hashtag" data-bind="couple.hashtag">#RitaEJoao2027</p>
+      <p class="footer-message">
+        "O amor é paciente, o amor é bondoso. Tudo sofre, tudo crê, tudo espera, tudo suporta."
+      </p>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">
+        Casamento de Rita Alves &amp; João Abreu • 23 de Julho de 2027<br>
+        Casa do Gandião • Fafe<br>
+        Feito com ❤️ para os nossos convidados
+      </p>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       MODAL LIGHTBOX PARA FOTOS DA GALERIA
+       ====================================================================== -->
+  <div id="lightboxModal" class="lightbox-modal">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Fechar Foto">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" class="lightbox-img" src="" alt="Foto Ampliada">
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/rsvp.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
