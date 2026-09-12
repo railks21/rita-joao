@@ -903,6 +903,7 @@ button, input, textarea, select {
   padding: 1.5rem;
   opacity: 0;
   transition: var(--transition-base);
+  pointer-events: none;
 }
 
 .gallery-overlay span {

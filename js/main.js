@@ -171,12 +171,32 @@ function initLightbox() {
 
   if (!modal || !modalImg) return;
 
-  galleryItems.forEach((img) => {
-    img.addEventListener("click", () => {
-      modalImg.src = img.getAttribute("src");
-      modalImg.alt = img.getAttribute("alt") || "Fotografia do Casamento";
-      modal.classList.add("active");
-      document.body.style.overflow = "hidden";
+  function openLightbox(src, alt) {
+    if (!src) return;
+    modalImg.src = src;
+    modalImg.alt = alt || "Fotografia do Casamento";
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  // Clicar em qualquer cartão da Galeria de Fotos
+  document.querySelectorAll(".gallery-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      const img = item.querySelector("img");
+      if (img) {
+        openLightbox(img.getAttribute("src"), img.getAttribute("alt"));
+      }
+    });
+  });
+
+  // Clicar em qualquer imagem ou cartão da Linha do Tempo
+  document.querySelectorAll(".timeline-img-wrap, .timeline-img").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const img = el.tagName.toLowerCase() === "img" ? el : el.querySelector("img");
+      if (img) {
+        openLightbox(img.getAttribute("src"), img.getAttribute("alt"));
+      }
     });
   });
 
