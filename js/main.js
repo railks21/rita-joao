@@ -167,7 +167,7 @@ function initLightbox() {
   const modal = document.getElementById("lightboxModal");
   const modalImg = document.getElementById("lightboxImg");
   const closeBtn = document.getElementById("lightboxClose");
-  const galleryItems = document.querySelectorAll(".gallery-item img");
+  const galleryItems = document.querySelectorAll(".gallery-item img, .timeline-img");
 
   if (!modal || !modalImg) return;
 
