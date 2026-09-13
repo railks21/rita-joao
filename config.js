@@ -23,7 +23,7 @@ const WEDDING_CONFIG = {
     displayDate: "23 de Julho de 2027",
     dayOfWeek: "Sexta-feira",
     time: "15:00",
-    rsvpDeadline: "31 de Maio de 2027"
+    rsvpDeadline: "1 de maio de 2027"
   },
 
   // Locais do Evento
@@ -207,7 +207,7 @@ const WEDDING_CONFIG = {
     },
     {
       q: "Até quando devo confirmar a presença?",
-      a: "Agradecemos que nos confirmem a vossa presença até ao dia 31 de Maio de 2027, para que possamos organizar tudo da melhor forma com o catering."
+      a: "Agradecemos que nos confirmem a vossa presença até ao dia 1 de maio de 2027, para que possamos organizar tudo da melhor forma com o catering."
     },
     {
       q: "Qual é o dress code recomendado?",
