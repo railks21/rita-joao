@@ -638,6 +638,23 @@ button, input, textarea, select {
   transform: scale(1.05);
 }
 
+/* Ajustes de foco/enquadramento de fotos (evita cortar rostos) */
+.object-top {
+  object-position: top center !important;
+}
+
+.object-top-15 {
+  object-position: center 15% !important;
+}
+
+.object-top-25 {
+  object-position: center 25% !important;
+}
+
+.object-bottom {
+  object-position: bottom center !important;
+}
+
 .timeline-body {
   padding: 1.6rem 1.8rem;
 }
