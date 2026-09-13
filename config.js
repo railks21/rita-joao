@@ -55,62 +55,6 @@ const WEDDING_CONFIG = {
     }
   },
 
-  // Contactos para RSVP
-  contacts: {
-    whatsappNumber: "351912345678",
-    email: "casamento.rita.joao@exemplo.com",
-    phoneBride: "+351 912 345 678",
-    phoneGroom: "+351 912 345 679"
-  },
-
-  // Dados para Lista de Casamento / Presentes
-  gifts: {
-    message: "A vossa presença no nosso dia é, sem dúvida, o presente mais valioso de todos. Se ainda assim quiserem contribuir para o início desta nossa vida a dois e para a nossa lua de mel, deixamos abaixo os nossos dados:",
-    iban: "PT50 0000 0000 0000 0000 0000 0",
-    ibanHolder: "Rita Alves e João Abreu",
-    mbway: "+351 912 345 678"
-  },
-
-  // Programa do Dia
-  schedule: [
-    {
-      time: "14:30",
-      icon: "users",
-      title: "Receção dos Convidados",
-      description: "Chegada dos convidados à Casa do Gandião e boas-vindas ao espaço."
-    },
-    {
-      time: "15:00",
-      icon: "rings",
-      title: "A Cerimónia",
-      description: "O momento solene do 'Sim', onde celebramos os nossos votos de amor."
-    },
-    {
-      time: "16:30",
-      icon: "glass",
-      title: "Welcome Drink & Cocktail",
-      description: "Aperitivos, música ambiente e os primeiros brindes nos jardins da quinta."
-    },
-    {
-      time: "19:30",
-      icon: "utensils",
-      title: "Jantar & Convívio",
-      description: "Banquete com menu especial, discursos e momentos inesquecíveis."
-    },
-    {
-      time: "22:30",
-      icon: "cake",
-      title: "Corte do Bolo",
-      description: "Corte do bolo dos noivos, brinde com champanhe e cortejos de luzes."
-    },
-    {
-      time: "23:00",
-      icon: "music",
-      title: "Abertura da Pista & Festa",
-      description: "Música, dança, bar aberto e ceia até o corpo aguentar!"
-    }
-  ],
-
   // Linha do Tempo / Nossa História
   story: [
     {
@@ -198,34 +142,6 @@ const WEDDING_CONFIG = {
       text: "Com o coração aos pulos e num cenário de sonho, fizemos a promessa de uma vida inteira juntos."
     }
   ],
-
-  // Perguntas Frequentes (FAQ)
-  faq: [
-    {
-      q: "Onde se realiza o casamento?",
-      a: "O casamento realizar-se-á na magnífica Casa do Gandião, situada na Rua do Penedo nº 7, Arões (São Romão), Fafe."
-    },
-    {
-      q: "Até quando devo confirmar a presença?",
-      a: "Agradecemos que nos confirmem a vossa presença até ao dia 1 de maio de 2027, para que possamos organizar tudo da melhor forma com o catering."
-    },
-    {
-      q: "Qual é o dress code recomendado?",
-      a: "Sugerimos traje Formal / Passeio Completo. Tragam calçado confortável para que possam dançar connosco a noite inteira!"
-    },
-    {
-      q: "Posso levar crianças?",
-      a: "Sim! Adoramos as crianças da nossa família e amigos. Por favor, indique no formulário de confirmação quantas crianças irão consigo para que preparemos espaço e menu infantil."
-    },
-    {
-      q: "E se eu tiver alergias ou restrições alimentares?",
-      a: "No formulário de confirmação abaixo (RSVP) existe um campo próprio para indicar alergias, intolerâncias ou dietas vegetarianas/vegan. Nós adaptaremos o menu consigo."
-    },
-    {
-      q: "Haverá estacionamento na Casa do Gandião?",
-      a: "Sim, a Casa do Gandião dispõe de amplo estacionamento gratuito e privado para todos os convidados."
-    }
-  ]
 };
 
 // Exportar globalmente caso necessário
