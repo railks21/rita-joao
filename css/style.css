@@ -1241,16 +1241,14 @@ button, input, textarea, select {
   gap: 1rem;
 }
 
-.child-age-group {
-  margin-top: 1rem;
-  padding-top: 0.8rem;
-  border-top: 1px dashed var(--color-border);
+.guest-child-grid {
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 1rem;
 }
 
-.child-age-radios {
+.child-age-col {
   display: flex;
-  gap: 1.5rem;
-  margin-top: 0.4rem;
+  flex-direction: column;
 }
 
 /* Success Card */
@@ -1684,6 +1682,15 @@ button, input, textarea, select {
   .guest-names-grid {
     grid-template-columns: 1fr;
     gap: 0.8rem;
+  }
+
+  .guest-child-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .child-age-col input {
+    max-width: 140px;
   }
 }
 

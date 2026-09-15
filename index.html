@@ -583,7 +583,7 @@
           </span>
         </div>
 
-        <form id="rsvpForm" class="rsvp-form" novalidate>
+        <form id="rsvpForm" class="rsvp-form">
           <!-- Confirmação de Presença -->
           <div class="form-group-full">
             <label class="form-label">Podemos contar com a vossa presença? *</label>
@@ -616,13 +616,14 @@
               </div>
 
               <div>
-                <label class="form-label" for="childrenCount">Número de Crianças</label>
+                <label class="form-label" for="childrenCount">Número de Menores</label>
                 <select id="childrenCount" class="form-select">
-                  <option value="0" selected>Nenhuma</option>
-                  <option value="1">1 Criança</option>
-                  <option value="2">2 Crianças</option>
-                  <option value="3">3 Crianças</option>
-                  <option value="4">4 Crianças</option>
+                  <option value="0" selected>Nenhum</option>
+                  <option value="1">1 Menor</option>
+                  <option value="2">2 Menores</option>
+                  <option value="3">3 Menores</option>
+                  <option value="4">4 Menores</option>
+                  <option value="5">5 Menores</option>
                 </select>
               </div>
             </div>
@@ -633,9 +634,9 @@
               <div id="adultsBoxes" class="guests-cards-wrap"></div>
             </div>
 
-            <!-- Caixas Dinâmicas de Crianças -->
+            <!-- Caixas Dinâmicas de Menores -->
             <div id="childrenGroup" class="form-group-full" style="display: none; margin-top: 1.5rem;">
-              <label class="form-label">Identificação das Crianças *</label>
+              <label class="form-label">Identificação dos Menores *</label>
               <div id="childrenBoxes" class="guests-cards-wrap"></div>
             </div>
 
@@ -644,12 +645,6 @@
               <label class="form-label" for="dietRestrictions">Restrições Alimentares ou Alergias (Opcional)</label>
               <input type="text" id="dietRestrictions" class="form-input" placeholder="Ex: Nenhuma / Vegetariano / Intolerância ao Glúten">
             </div>
-
-            <!-- Sugestão Musical -->
-            <!-- <div class="form-group-full" style="margin-top: 1.5rem;">
-              <label class="form-label" for="songRequest">Uma música que vos faça ir para a pista de dança! (Opcional)</label>
-              <input type="text" id="songRequest" class="form-input" placeholder="Artista - Nome da música">
-            </div> -->
           </div>
 
           <!-- Campos para quem NÃO pode estar presente -->
