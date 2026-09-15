@@ -55,6 +55,12 @@ const WEDDING_CONFIG = {
     }
   },
 
+  // Configuração do RSVP / Google Sheets
+  rsvp: {
+    // Cole aqui o URL da sua Aplicação Web do Google Apps Script
+    googleSheetScriptUrl: "https://script.google.com/macros/s/AKfycbyxvSYMUYy6e0gBJ7AeDi7mRUMQur20wWkzfJSOeYidiDihDdtP0W3jSBarCicHsIcG/exec",
+  },
+
   // Linha do Tempo / Nossa História
   story: [
     {

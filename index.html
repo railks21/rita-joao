@@ -583,17 +583,11 @@
           </span>
         </div>
 
-        <form id="rsvpForm" class="rsvp-form">
-          <!-- Nome Completo -->
+        <form id="rsvpForm" class="rsvp-form" novalidate>
+          <!-- Confirmação de Presença -->
           <div class="form-group-full">
-            <label class="form-label" for="guestName">Nome Completo *</label>
-            <input type="text" id="guestName" class="form-input" placeholder="Ex: Maria Fernandes & Família" required>
-          </div>
-
-          <!-- Confirmação -->
-          <div class="form-group-full">
-            <label class="form-label">Podemos contar com a vossa presença?</label>
-            <div class="radio-group">
+            <label class="form-label">Podemos contar com a vossa presença? *</label>
+            <div class="radio-group attendance-radios">
               <label class="radio-label">
                 <input type="radio" name="attendance" value="Sim" checked>
                 <span>Sim! 🎉</span>
@@ -605,65 +599,106 @@
             </div>
           </div>
 
-          <!-- Adultos -->
-          <div>
-            <label class="form-label" for="adultsCount">Número de Adultos</label>
-            <select id="adultsCount" class="form-select">
-              <option value="1">1 Pessoa</option>
-              <option value="2" selected>2 Pessoas</option>
-              <option value="3">3 Pessoas</option>
-              <option value="4">4 Pessoas</option>
-              <option value="5+">5 ou mais</option>
-            </select>
+          <!-- Campos para quem VAI estar presente -->
+          <div id="attendingSection" class="form-group-full">
+            <!-- Seleção de Quantidade -->
+            <div class="rsvp-counts-grid">
+              <div>
+                <label class="form-label" for="adultsCount">Número de Adultos *</label>
+                <select id="adultsCount" class="form-select">
+                  <option value="1">1 Adulto</option>
+                  <option value="2" selected>2 Adultos</option>
+                  <option value="3">3 Adultos</option>
+                  <option value="4">4 Adultos</option>
+                  <option value="5">5 Adultos</option>
+                  <option value="6">6 Adultos</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label" for="childrenCount">Número de Crianças</label>
+                <select id="childrenCount" class="form-select">
+                  <option value="0" selected>Nenhuma</option>
+                  <option value="1">1 Criança</option>
+                  <option value="2">2 Crianças</option>
+                  <option value="3">3 Crianças</option>
+                  <option value="4">4 Crianças</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Caixas Dinâmicas de Adultos -->
+            <div class="form-group-full" style="margin-top: 1.5rem;">
+              <label class="form-label">Identificação dos Adultos *</label>
+              <div id="adultsBoxes" class="guests-cards-wrap"></div>
+            </div>
+
+            <!-- Caixas Dinâmicas de Crianças -->
+            <div id="childrenGroup" class="form-group-full" style="display: none; margin-top: 1.5rem;">
+              <label class="form-label">Identificação das Crianças *</label>
+              <div id="childrenBoxes" class="guests-cards-wrap"></div>
+            </div>
+
+            <!-- Restrições Alimentares -->
+            <div class="form-group-full" style="margin-top: 1.5rem;">
+              <label class="form-label" for="dietRestrictions">Restrições Alimentares ou Alergias (Opcional)</label>
+              <input type="text" id="dietRestrictions" class="form-input" placeholder="Ex: Nenhuma / Vegetariano / Intolerância ao Glúten">
+            </div>
+
+            <!-- Sugestão Musical -->
+            <div class="form-group-full" style="margin-top: 1.5rem;">
+              <label class="form-label" for="songRequest">Uma música que vos faça ir para a pista de dança! (Opcional)</label>
+              <input type="text" id="songRequest" class="form-input" placeholder="Artista - Nome da música">
+            </div>
           </div>
 
-          <!-- Crianças -->
-          <div>
-            <label class="form-label" for="childrenCount">Crianças (até 10 anos)</label>
-            <select id="childrenCount" class="form-select">
-              <option value="0" selected>Nenhuma</option>
-              <option value="1">1 Criança</option>
-              <option value="2">2 Crianças</option>
-              <option value="3+">3 ou mais</option>
-            </select>
-          </div>
-
-          <!-- Restrições Alimentares -->
-          <div class="form-group-full">
-            <label class="form-label" for="dietRestrictions">Restrições Alimentares ou Alergias</label>
-            <input type="text" id="dietRestrictions" class="form-input" placeholder="Ex: Nenhuma / Vegetariano / Intolerância ao Glúten">
-          </div>
-
-          <!-- Sugestão Musical -->
-          <div class="form-group-full">
-            <label class="form-label" for="songRequest">Uma música que te faça ir para a pista de dança!</label>
-            <input type="text" id="songRequest" class="form-input" placeholder="Artista - Nome da música">
+          <!-- Campos para quem NÃO pode estar presente -->
+          <div id="decliningSection" class="form-group-full" style="display: none;">
+            <div class="guest-names-grid">
+              <div>
+                <label class="form-label" for="decliningFirstName">Primeiro Nome *</label>
+                <input type="text" id="decliningFirstName" class="form-input" placeholder="Ex: Maria">
+              </div>
+              <div>
+                <label class="form-label" for="decliningLastName">Apelido *</label>
+                <input type="text" id="decliningLastName" class="form-input" placeholder="Ex: Fernandes">
+              </div>
+            </div>
           </div>
 
           <!-- Mensagem aos Noivos -->
           <div class="form-group-full">
             <label class="form-label" for="guestNotes">Mensagem aos Noivos (Opcional)</label>
-            <textarea id="guestNotes" class="form-textarea" rows="3" placeholder="Deixe aqui uma mensagem de carinho..."></textarea>
+            <textarea id="guestNotes" class="form-textarea" rows="3" placeholder="Deixem uma mensagem de carinho aos noivos..."></textarea>
           </div>
 
           <!-- Ações do Formulário -->
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 380px;">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.35.49 1.199.534 1.288.043.088.072.19.014.305-.058.115-.087.19-.173.289l-.26.302c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086.159.058 1.011.477 1.184.564.173.086.289.13.332.202.043.072.043.419-.101.824z"/>
-              </svg>
-              Enviar Confirmação por WhatsApp
+            <button type="submit" id="btnSubmitRsvp" class="btn btn-primary" style="width: 100%; max-width: 380px;">
+              <span id="btnSubmitText">Confirmar Presença</span>
             </button>
-
-            <button type="button" id="btnCopyRsvp" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1.4rem;">
-              📋 Copiar Resumo da Confirmação
-            </button>
-
-            <p class="rsvp-help-text">
-              Ao clicar no botão verde, uma mensagem personalizada será preparada diretamente no seu WhatsApp para nos enviar.
-            </p>
+            <p id="rsvpStatusMessage" class="rsvp-help-text" style="display: none;"></p>
           </div>
         </form>
+
+        <!-- Cartão de Confirmação Sucesso -->
+        <div id="rsvpSuccessCard" class="rsvp-success-card" style="display: none;">
+          <div class="rsvp-success-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <h3 class="rsvp-success-title">Presença Confirmada! 🎉</h3>
+          <p id="rsvpSuccessNames" class="rsvp-success-desc">
+            Muito obrigado! A vossa resposta foi registada com sucesso na nossa lista de convidados.
+          </p>
+          <p class="rsvp-success-sub">
+            Mal podemos esperar por celebrar convosco no dia <strong>23 de Julho de 2027</strong> na Casa do Gandião! 🤍
+          </p>
+          <button type="button" id="btnResetRsvp" class="btn btn-secondary" style="margin-top: 1.2rem; font-size: 0.85rem;">
+            Alterar ou enviar nova resposta
+          </button>
+        </div>
       </div>
     </div>
   </section>
